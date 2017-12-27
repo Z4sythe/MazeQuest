@@ -1,0 +1,41 @@
+~~~~~~~~~~~~~~~~~~~~~ MazeQuest Notes ~~~~~~~~~~~~~~~~~~~~~
+
+
+12/24/17:
+-Character Inventory - choices to swap weapons and armor - 2D array
+-Character Reputation
+-Talent and Ability Trees
+-Different bosses with high stats in some areas + regular enemies
+-Reputation slider bar that varies based on kills and quests - Friendly and up = buy things
+-Experience bar that varies with level
+-Fast traveling - without fighting? - fast traveling and mounts are unlocked at a level - ground vs flying mount perks for travel
+-Weapon and armor rarities
+
+-Character Stats:
+--[general] - health, attack power, defensive prowess 
+--[aux] - agility (speed for who attacks first), crit chance, 
+--[class specific] - rage, mana, energy (w/ their respective caps that could vary)
+
+Older thoughts:
+
+/**TODO
+* Add a menu (ie. 'Play', 'Exit')
+* Add an in game options menu (ie. to call toString method with a button)
+* Add a levels class.
+* Add other character classes.
+* Create an enemy class.
+*/
+// Make health scale with level (var maxHealth) and add health potions.
+// Add character class explanations of skills and abilities.
+// Create character stats that affect the different classes. Intellect, Agility, and Strength can be damage increasers from normal damage.
+// Create enemies with specific stats.
+// Create an class to gather stats.
+// Create skills and abilites as methods.
+// Make levels increase stats.
+// Add enemy defense stat.
+// Add health potions and loot system.// Add percent chances for specific abilities.
+// Multiple monster encounters.
+// Shop to spend loot.
+// For loop for level up stats?
+// Make a backpack with arrays.
+// Create a GUI to take the game to the next level.
