@@ -1,7 +1,6 @@
 package stats;
 
-public interface CharacterStats {
-	
+public interface BattleWardenStats extends CharacterStats {
 	// General Setters
 	
 	// Sets a new health value.
@@ -23,5 +22,12 @@ public interface CharacterStats {
 	public double getDefense();
 
 	public double getHealth();
+
+
+	// BattleWarden specific
+	
+	// BattleWarden Getters
+	
+	public double getRage();
 	
 }

@@ -2,28 +2,40 @@ package hero;
 
 import java.util.Random;
 
-public class BattleWarden {
+import stats.BattleWardenStats;
+
+public class BattleWarden implements BattleWardenStats {
 	
 	private double health = 0;
 	// This healthCap increases with increasing levels.
 	private double healthCap = 100;
 	private double attack = 0;
+	private double defense = 0;
 	private double rage = 0;
 	// This rage cap could vary based on in-game abilities
 	private double rageCap = 100;
 	
 	Random rng = new Random();
 
-	// Basic BattleWarden constructor
-	public BattleWarden(double healthPool, double atkPower, double currentRage) {
+	// BattleWarden constructors
+	
+	public BattleWarden() {
+		health = 100;
+		attack = 5;
+		rage = 0;
+		defense = 0;
+	}
+	
+	public BattleWarden(double healthPool, double atkPower, double defProwess, double currentRage) {
 		health = healthPool;
 		attack = atkPower;
 		rage = currentRage;
+		defense = defProwess;
 
 	}
 	
 	
-	// Character Abilities:
+	// Class Abilities
 	
 	// Provides a regenerative effect to the user.
 	public double drinkBlood(double healthPool) {
@@ -53,19 +65,12 @@ public class BattleWarden {
 	}
 	
 	// Provides an over-shield of health to brace for the next incoming attack.
-//	public double shieldUp(int currentDefense) {
-//		
-//	}
-	
-	
-	// Setters
-	
-	// Sets the new health of the Warrior.
-	public double health(double healthPool) {
-		return health;
+	public void shieldsUp(int defenseIncrease) {
+		defense += defenseIncrease;
 	}
+	
 
-	// Sets the attack of the Warrior.
+	// Returns an attack value to use in a battle sequence.
 	public double attack(double atkPower, double currentRage) {
 		// The plus 1 shaves the 0 off the 0-10 normal spectrum.
 		// A minus 1 would lower the spectrum to encompass -1 as well.
@@ -86,6 +91,20 @@ public class BattleWarden {
 		return attack;
 	}
 	
+	//Character Status Check Methods
+	
+	//Checks if the character is alive.
+	public boolean isAlive(double currentHealth) {
+		if(currentHealth <= 0) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	
+	//CharacterStats Interface Methods
+	
 
 	// Getters
 	public double getAttack() {
@@ -95,9 +114,48 @@ public class BattleWarden {
 	public double getHealth() {
 		return health;
 	}
+	
+	@Override
+	public double getDefense() {
+		return defense;
+	}
+	
+	//Warrior-specific Getters
 
+	@Override
 	public double getRage() {
 		return rage;
+	}
+	
+	
+	
+	//Setters
+
+	@Override
+	public void setHealth(double newHealth) {
+		health = newHealth;
+		
+	}
+
+
+	@Override
+	public void setHealthCap(double newHealthCap) {
+		healthCap = newHealthCap;
+		
+	}
+
+
+	@Override
+	public void setAttack(double newAttack) {
+		attack = newAttack;
+		
+	}
+
+
+	@Override
+	public void setDefense(double newDefense) {
+		defense = newDefense;
+		
 	}
 	
 	

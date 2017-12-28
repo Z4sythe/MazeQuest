@@ -1,5 +1,9 @@
 ~~~~~~~~~~~~~~~~~~~~~ MazeQuest Notes ~~~~~~~~~~~~~~~~~~~~~
 
+12/28/17
+-Allow character info to save?
+-Central game loop
+
 
 12/24/17:
 -Character Inventory - choices to swap weapons and armor - 2D array
@@ -19,7 +23,6 @@
 Older thoughts:
 
 /**TODO
-* Add a menu (ie. 'Play', 'Exit')
 * Add an in game options menu (ie. to call toString method with a button)
 * Add a levels class.
 * Add other character classes.
@@ -38,4 +41,7 @@ Older thoughts:
 // Shop to spend loot.
 // For loop for level up stats?
 // Make a backpack with arrays.
-// Create a GUI to take the game to the next level.
+// Create a GUI to take the game to the next level. - main menu then game in own window
+
+Done:
+* Add a menu (ie. 'Play', 'Exit')
