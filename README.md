@@ -1,2 +1,2 @@
 # MazeQuest
-Dungeon Crawler Project
+This is a dungeon crawler game project.
